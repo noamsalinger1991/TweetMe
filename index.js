@@ -37,7 +37,7 @@ app.post('/post' , function(req ,res){
 	  console.log(tweet);  // Tweet body.
 	  console.log(response);  // Raw response object.
 	});
-}
+});
 
 app.get('/get' , function(req ,res){
 twitter.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(error, data, response) {
@@ -47,5 +47,5 @@ twitter.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, funct
   }
   console.log(tweet);  // Tweet body.
   console.log(response);  // Raw response object.
-})
-}
+})	
+});
