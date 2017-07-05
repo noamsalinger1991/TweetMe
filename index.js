@@ -45,8 +45,6 @@ twitter.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, funct
   if(error){
     console.log(error);
   }
-  console.log(tweet);  // Tweet body.
-  console.log(response);  // Raw response object.
   res.send(data).end();
 })	
 });
