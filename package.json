@@ -4,10 +4,11 @@
   "description": "tweeter app",
   "main": "index.js",
   "dependencies":{
-        "twit": "2.2.9"
+        "twit": "2.2.9",
+		"express": "4.15.3"
     },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js"
   },
   "author": "noam salinger",
   "license": "ISC",
