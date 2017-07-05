@@ -52,7 +52,7 @@ twitter.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, funct
   if(error){
     console.log(error);
   }
-  
-  res.send(data).end();
+  var jsonobj = JSON.parse(data);
+  res.send(jsonobj.text).end();
 })	
 });
