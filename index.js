@@ -36,6 +36,7 @@ app.post('/post' , function(req ,res){
 	  }
 	  console.log(tweet);  // Tweet body.
 	  console.log(response);  // Raw response object.
+	  console.log(message);
 	  res.send('message sent').end();
 	});
 });
