@@ -1,9 +1,13 @@
 {
-    "name":"tweetMe",
-    "description":"Twitter aplication",
-    "version":"0.0.0",
-    "directories" : { "lib": "./lib" },
-    "dependencies":{
+  "name": "TweetMe",
+  "version": "0.0.0",
+  "description": "tweeter app,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo 'Error: no test specified' && exit 1"
+  },"dependencies":{
         "twit": "2.2.9",
     }
+  "author": "",
+  "license": "ISC"
 }
