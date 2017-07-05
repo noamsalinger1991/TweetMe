@@ -30,12 +30,13 @@ var twitter = new Twitter({
 });
 app.post('/post' , function(req ,res){
 	const message = req.query.message;
-	twitter.post('statuses/update', {status: 'testing'},  function(error, tweet, response){
+	twitter.post('statuses/update', {status: message},  function(error, tweet, response){
 	  if(error){
 		console.log(error);
 	  }
 	  console.log(tweet);  // Tweet body.
 	  console.log(response);  // Raw response object.
+	  res.send('message sent').end();
 	});
 });
 
