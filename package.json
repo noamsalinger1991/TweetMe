@@ -6,7 +6,6 @@
   "dependencies":{
         "twit": "2.2.9",
     },
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
   },
