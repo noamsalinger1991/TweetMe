@@ -6,7 +6,7 @@ var Twitter = require('twit');
 
 app.set('views', __dirname + '/views');
 
-app.set('view engine', 'ejs');
+// app.set('view engine', 'ejs');
 
 app.listen(port, function() {
     console.log('Our app is running on http://localhost:' + port);
@@ -20,7 +20,7 @@ var success = function (data) {
     console.log('Data [%s]', data);
 };
 
-
+//loads token for aouth
 var config = require('./config');
 var twitter = new Twitter({
     consumer_key: config.consumer_key,
@@ -28,6 +28,8 @@ var twitter = new Twitter({
     access_token: config.access_token,
     access_token_secret: config.access_token_secret
 });
+
+//post endpoint for posting tweets
 app.post('/post' , function(req ,res){
 	
 	const message = req.query.message;
@@ -43,12 +45,14 @@ app.post('/post' , function(req ,res){
 	});
 });
 
+// get endpoint for getting tweets
 app.get('/get' , function(req ,res){
 twitter.get('search/tweets', { q: 'banana since:2011-07-11', count: 100 }, function(error, data, response) {
   console.log(data)
   if(error){
     console.log(error);
   }
+  
   res.send(data).end();
 })	
 });
