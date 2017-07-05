@@ -1,0 +1,9 @@
+{
+    "name":"tweetMe",
+    "description":"Twitter aplication",
+    "version":"0.0.0",
+    "directories" : { "lib": "./lib" },
+    "dependencies":{
+        "twit": "2.2.9",
+    }
+}
