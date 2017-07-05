@@ -29,14 +29,16 @@ var twitter = new Twitter({
     access_token_secret: config.access_token_secret
 });
 app.post('/post' , function(req ,res){
+	
 	const message = req.query.message;
+	console.log(message);
 	twitter.post('statuses/update', {status: message},  function(error, tweet, response){
 	  if(error){
 		console.log(error);
 	  }
 	  console.log(tweet);  // Tweet body.
 	  console.log(response);  // Raw response object.
-	  console.log(message);
+
 	  res.send('message sent').end();
 	});
 });
